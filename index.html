@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Lisean San — Portfolio</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<style>
+  html { scroll-behavior: smooth; }
+
+  /* subtle animation */
+  .fade { animation: fadeUp 1s ease forwards; opacity: 0; }
+  .fade-delay { animation-delay: .3s; }
+
+  @keyframes fadeUp {
+    from { opacity:0; transform: translateY(20px); }
+    to { opacity:1; transform: translateY(0); }
+  }
+
+  /* glass navbar */
+  .glass {
+    backdrop-filter: blur(10px);
+    background: rgba(255,255,255,0.7);
+  }
+</style>
+</head>
+
+<body class="bg-white text-gray-900 font-sans">
+
+<!-- NAV -->
+<header class="fixed w-full top-0 z-50 glass border-b">
+  <div class="max-w-6xl mx-auto flex justify-between items-center px-6 py-4">
+    <h1 class="font-bold text-green-600 text-lg">Lisean San</h1>
+
+    <nav class="hidden md:flex gap-8 text-sm font-medium">
+      <a href="#about" class="hover:text-green-600">About</a>
+      <a href="#projects" class="hover:text-green-600">Projects</a>
+      <a href="#experience" class="hover:text-green-600">Experience</a>
+      <a href="#contact" class="hover:text-green-600">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="min-h-screen flex items-center pt-24">
+  <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
+
+    <!-- TEXT -->
+    <div class="fade">
+      <p class="text-green-600 font-medium mb-3">Hello, I'm</p>
+
+      <h1 class="text-5xl md:text-6xl font-extrabold leading-tight mb-4">
+        Lisean San
+      </h1>
+
+      <p class="text-lg text-gray-600 mb-6">
+        IT Student & English Teacher focused on building practical solutions, 
+        improving systems, and helping others learn technology.
+      </p>
+
+      <div class="flex gap-4">
+        <a href="#projects"
+           class="bg-green-600 text-white px-6 py-3 rounded-xl hover:bg-yellow-500 transition">
+           View Projects
+        </a>
+
+        <a href="#contact"
+           class="border px-6 py-3 rounded-xl hover:border-green-600">
+           Contact
+        </a>
+      </div>
+    </div>
+
+    <!-- IMAGE -->
+    <div class="fade fade-delay flex justify-center">
+      <img src="/image/me.jpg" alt="Lisean San"
+           class=" w-3/4 rounded-2xl shadow-xl border-4 border-green-500">
+    </div>
+
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="py-24 border-t">
+  <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12">
+
+    <div>
+      <h2 class="text-3xl font-bold mb-6">About</h2>
+      <p class="text-gray-600 leading-relaxed">
+        I am an IT student with experience in teaching and technical support.
+        I enjoy solving problems, learning new technologies, and helping others 
+        understand complex topics in simple ways.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-2 gap-6 text-sm">
+      <div><strong>Location:</strong><br>Cambodia</div>
+      <div><strong>Languages:</strong><br>Khmer, English</div>
+      <div><strong>Focus:</strong><br>IT & Teaching</div>
+      <div><strong>Status:</strong><br>Student</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="py-24 bg-gray-50">
+  <div class="max-w-6xl mx-auto px-6">
+
+    <h2 class="text-3xl font-bold mb-12">Selected Projects</h2>
+
+    <div class="grid md:grid-cols-3 gap-8">
+
+      <!-- CARD -->
+      <div class="bg-white p-6 rounded-2xl shadow hover:shadow-xl transition">
+        <h3 class="font-semibold text-lg mb-2">Portfolio Website</h3>
+        <p class="text-sm text-gray-600 mb-4">
+          Personal portfolio built with HTML & Tailwind CSS.
+        </p>
+        <span class="text-green-600 text-sm">HTML • Tailwind</span>
+      </div>
+
+      <div class="bg-white p-6 rounded-2xl shadow hover:shadow-xl transition">
+        <h3 class="font-semibold text-lg mb-2"><a href="https://coffee-craft-mu.vercel.app/">Coffee Craft</a></h3>
+        <p class="text-sm text-gray-600 mb-4">
+          Project that I have done in html and tailwind
+        </p>
+        <span class="text-green-600 text-sm">HTML • Tailwind</span>
+      </div>
+
+      <div class="bg-white p-6 rounded-2xl shadow hover:shadow-xl transition">
+        <h3 class="font-semibold text-lg mb-2">Teaching Materials</h3>
+        <p class="text-sm text-gray-600 mb-4">
+          Created structured lessons for English learners.
+        </p>
+        <span class="text-green-600 text-sm">Education • Content</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience" class="py-24">
+  <div class="max-w-6xl mx-auto px-6">
+
+    <h2 class="text-3xl font-bold mb-12">Experience</h2>
+
+    <div class="border-l-2 border-green-600 pl-6">
+      <h3 class="font-semibold text-lg">
+        IT Support Intern & English Teacher
+      </h3>
+      <p class="text-sm text-gray-500 mb-4">2024 — Present</p>
+
+      <ul class="text-gray-600 space-y-2 list-disc ml-5">
+        <li>Provided technical support and troubleshooting</li>
+        <li>Maintained student data systems</li>
+        <li>Taught English and improved student performance</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="py-24">
+  <div class="max-w-6xl mx-auto px-6">
+
+    <h2 class="text-3xl font-bold mb-12">Skills</h2>
+
+    <div class="space-y-6">
+
+      <!-- SKILL -->
+      <div>
+        <p class="mb-1">HTML & CSS</p>
+        <div class="w-full bg-gray-200 rounded-full h-3">
+          <div class="bg-green-600 h-3 rounded-full w-3/4"></div>
+        </div>
+      </div>
+
+      <div>
+        <p class="mb-1">C / C++</p>
+        <div class="w-full bg-gray-200 rounded-full h-3">
+          <div class="bg-green-600 h-3 rounded-full w-2/3"></div>
+        </div>
+      </div>
+
+      <div>
+        <p class="mb-1">IT Support</p>
+        <div class="w-full bg-gray-200 rounded-full h-3">
+          <div class="bg-green-600 h-3 rounded-full w-4/5"></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="py-24 bg-gray-50">
+  <div class="max-w-6xl mx-auto px-6">
+
+    <h2 class="text-3xl font-bold mb-6">Contact</h2>
+    <p class="text-gray-600 mb-8">
+      Open to opportunities, collaborations, and learning.
+    </p>
+
+    <form class="max-w-md space-y-4">
+      <input type="text" placeholder="Name" class="w-full p-3 border rounded-lg">
+      <input type="email" placeholder="Email" class="w-full p-3 border rounded-lg">
+      <textarea placeholder="Message" class="w-full p-3 border rounded-lg"></textarea>
+
+      <button class="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-yellow-500 transition">
+        Send Message
+      </button>
+    </form>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="text-center text-sm py-6 border-t">
+  © 2026 Lisean San — Portfolio
+</footer>
+
+</body>
+</html>
